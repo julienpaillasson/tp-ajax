@@ -29,9 +29,9 @@ else if($_SERVER['REQUEST_METHOD'] == 'GET') {
 	$request = "SELECT * FROM vehicules";
 
 	$prep = $pdo->prepare($request);
-	$result = $prep->execute();
+	$prep->execute();
 
-	echo json_encode($result->fetchAll(PDO::FETCH_ASSOC));
+	echo json_encode($prep->fetchAll(PDO::FETCH_ASSOC));
 
 }
 
