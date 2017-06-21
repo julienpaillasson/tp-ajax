@@ -11,7 +11,7 @@ $(function () {
 		.done(function(data){
 			var content;
 			for (var i = 0; i < data.length; i++) {
-				content += "Marque : " + data[i].Marque + " Modèle : " + data[i].Modele
+				content += "<li>Marque : " + data[i].Marque + " Modèle : " + data[i].Modele + "</li>";
 			}
 			$('#right_column nav ul').html(content);
 		})
