@@ -1,5 +1,6 @@
 $(function () {
 	
+	$errorMessage = "Erreur du chargement des véhicules";
 
 	function displayVehicules () {
 		$.ajax({
@@ -16,7 +17,7 @@ $(function () {
 		})
 
 		.fail(function(jqXHR, textStatus){
-			
+			$('#affichage_vehicules').html($errorMessage);
 		});
 	}
 
