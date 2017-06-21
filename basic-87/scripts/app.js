@@ -1,5 +1,5 @@
 $(function(){
-
+	displayVehicules();
 
 	$("#form-ajout").submit(function(e){
 		e.preventDefault();
@@ -14,6 +14,8 @@ $(function(){
 			displayVehicules();
 		})
 		.fail(function(jqXHR, textStatus){
+			$error_message = "<div class='alert alert-danger'><strong>Failed !</strong></div>";
+			$('#message_ajax').html($error_message);
 			alert("Request failed: " + textStatus);
 
 		});
